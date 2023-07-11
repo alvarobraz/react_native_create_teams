@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FlatList } from 'react-native'
+import { useRoute } from '@react-navigation/native';
 
 import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
@@ -12,16 +13,28 @@ import { Button } from '@components/Button';
 
 import { Container, Form, HeaderList, NumberOfPlayers } from "./styles";
 
+// tipando props que vem via navigation
+type RouteParams = {
+  group: string;
+}
+
 export function Players() {
   const [team, setTeam] = useState('Time A')
   const [players, setPlayers] = useState([])
+
+  // use route
+  const route = useRoute()
+
+  // desestruturando group que vem de params como props 
+  const { group } = route.params as RouteParams
 
   return (
     <Container>
       <Header showBackButton />
 
       <Highlight 
-        title="Nome da turma"
+        // recebendp group
+        title={group}
         subtitle="adicione a galera e separe os times"
       />
      <Form>
