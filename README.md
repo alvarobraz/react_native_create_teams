@@ -11,7 +11,7 @@
   <img alt="Language count" src="https://img.shields.io/github/repo-size/alvarobraz/react_native_create_teams"/>
 
   <a href="https://nestjs.com/">
-    <img alt="Made by NodeJS" src="https://img.shields.io/badge/made%20by-nodejs-%237519C1">
+    <img alt="Made by NodeJS" src="https://img.shields.io/badge/made%20by-reactnative-%237519C1">
   </a>
 
   <a href="https://www.linkedin.com/in/alvarobraz/">
